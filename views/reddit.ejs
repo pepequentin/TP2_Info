@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <div class="container">
+    <h1>Reddit API</h1>
+    
+    <h2>N Top post(s) of the day in subreddit S</h2>
+    <label id=content for="subreddit">Enter a subreddit:</label>
+    <form action="http://localhost:8080/reddit" method="POST">
+      <input name="new_sub" type="name">
+      <select name="select_nbr">
+        <option value="1" selected>1</option> 
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <input type="submit" value="Update"></button>
+    </form>
+    <ul class="list-group">
+        <% for(var i=0; i<data.length; i++) {%>
+            <li class="list-group-item">
+                <span>Title: </span><%= data[i].text %>
+                <br/>
+                <span>Link: </span><%= data[i].link %>
+                <br/>
+                <span>Score: </span><%= data[i].score %>
+            </li>
+        <% } %>
+    </ul>
+
+    <h3>List of C new comment(s) for subreddit S</h3>
+    <label id=content3 for="subreddit">Enter a subreddit:</label>
+    <form action="http://localhost:8080/reddit" method="POST">
+      <input name="new_comment" type="name3">
+      <select name="nbr_comments">
+        <option value="1" selected>1</option> 
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <input type="submit" value="Update"></button>
+    </form>
+    <ul class="list-group">
+        <% for(var i=0; i<nbr_comments; i++) {%>
+            <li class="list-group-item">
+                <span>Title: </span><%= comments_list[i].title %>
+                <br/>
+                <span>Name: </span><%= comments_list[i].name %>
+                <br/>
+                <span>Comment: </span><%= comments_list[i].text %>
+            </li>
+        <% } %>
+    </ul>
+
+    <h4>Friends by name N</h4>
+    <label id=content2>Enter a name:</label>
+    <form action="http://localhost:8080/reddit" method="POST">
+      <input name="friend_name" type="name2">
+      <input type="submit" value="Update List"></button>
+    </form>
+    <ul class="list-group">
+        <% for(var i=0; i<friend_list.length; i++) {%>
+            <li class="list-group-item">
+                <span>Name: </span><%= friend_list[i].name %>
+                <br/>
+                <span>Friends since: </span><%= friend_list[i].date %>
+            </li>
+        <% } %>
+    </ul>
+
+
+  </div>
+  <a href="/">Welcome</a>
+</body>
+</html>
