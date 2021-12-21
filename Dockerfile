@@ -16,4 +16,4 @@ COPY . .
 # Expose port and start application
 
 EXPOSE 8081
-CMD [ "npm", "start"]
+CMD ["npm", "start"]

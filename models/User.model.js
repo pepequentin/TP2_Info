@@ -14,10 +14,6 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    secretid: {
-        type: String,
-        required: true
-    },
     date: {
         type: Date,
         default: Date.now

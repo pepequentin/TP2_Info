@@ -19,7 +19,7 @@
   }
   </style>
 </head>
-<body>
+<body style="background-color: #293179; color: white; text-align: center;">
     <%- include ('./partials/messages') %>
 <div class="jumbotron text-center" style="margin-bottom:0">
   <h1>Register</h1>
@@ -50,10 +50,6 @@
   <div class="form-group">
     <label for="pwd">Confirm your Password:</label>
     <input type="password" class="form-control" placeholder="Enter password" name="password2" value="<%= typeof password2 != 'undefined' ? password2 : '' %>">
-  </div>
-  <div class="form-group">
-    <label for="pwd">Create a secretid:</label>
-    <input type="password" class="form-control" placeholder="Enter secretid" name="secretid" value="<%= typeof secretid != 'undefined' ? secretid : '' %>">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
